@@ -3,7 +3,7 @@
     "homepage": "https://github.com/szewczykmaciek/TestGenerator",
     "name": "szewczykmaciek/test-generator",
     "type": "symfony-bundle",
-    "license": "GNU GPLv3",
+    "license": "BSD-3-Clause",
     "keywords": ["generator", "code generator", "tests", "codeception","unit","performance","benchmark","maintenance"],
     "authors": [
         {
