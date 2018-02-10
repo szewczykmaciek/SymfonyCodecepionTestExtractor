@@ -1,0 +1,40 @@
+{
+    "description": "TestGenerator bundle allows to generate, update and maintain tests in application.",
+    "homepage": "https://github.com/szewczykmaciek/TestGenerator",
+    "name": "szewczykmaciek/test-generator",
+    "type": "symfony-bundle",
+    "license": "GNU GPLv3",
+    "keywords": ["generator", "code generator", "tests", "codeception","unit","performance","benchmark","maintenance"],
+    "authors": [
+        {
+            "name": "Maciej Szewczyk",
+            "homepage": "http://szewczykmaciej.pl"
+        }
+    ],
+    "require": {
+        "php": "^7.0.8",
+        "symfony/config": "^3.4|^4.0",
+        "symfony/console": "^3.4|^4.0",
+        "symfony/dependency-injection": "^3.4|^4.0",
+        "symfony/filesystem": "^3.4|^4.0",
+        "symfony/framework-bundle": "^3.4|^4.0",
+        "symfony/http-kernel": "^3.4|^4.0"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^3.4|^4.0"
+    },
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": { "SzewczykMaciek\\Bundle\\TestGenerator\\": "test-generator/src"}
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
