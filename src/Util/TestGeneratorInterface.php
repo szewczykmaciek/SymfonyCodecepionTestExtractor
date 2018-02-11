@@ -1,9 +1,8 @@
 <?php
 
-namespace SzewczykMaciek\Bundle\TestGeneratorBundle\Util;
+namespace SzewczykMaciek\Bundle\TestGenerator\Util;
 
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputInterface;
 
 interface TestGeneratorInterface
 {

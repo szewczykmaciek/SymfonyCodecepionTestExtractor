@@ -1,9 +1,9 @@
 <?php
-namespace SzewczykMaciek\Bundle\TestGeneratorBundle\Generators;
+namespace SzewczykMaciek\Bundle\TestGenerator\Generators;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
-use SzewczykMaciek\Bundle\TestGeneratorBundle\Util\TestGeneratorAbstract;
+use SzewczykMaciek\Bundle\TestGenerator\Util\TestGeneratorAbstract;
 
 
 final class GenerateEntity extends TestGeneratorAbstract

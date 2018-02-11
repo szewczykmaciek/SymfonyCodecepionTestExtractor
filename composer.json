@@ -30,7 +30,7 @@
         "sort-packages": true
     },
     "autoload": {
-        "psr-4": { "SzewczykMaciek\\Bundle\\TestGenerator\\": "test-generator/src"}
+        "psr-4": { "SzewczykMaciek\\Bundle\\TestGenerator\\": "src"}
     },
     "extra": {
         "branch-alias": {

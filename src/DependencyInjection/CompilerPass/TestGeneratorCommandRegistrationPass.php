@@ -1,13 +1,14 @@
 <?php
 
-namespace SzewczykMaciek\Bundle\TestGeneratorBundle\DependencyInjection\CompilerPass;
+namespace SzewczykMaciek\Bundle\TestGenerator\DependencyInjection\CompilerPass;
 
-use Symfony\Bundle\MakerBundle\Command\TestGeneratorCommand;
+
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Exception\InvalidArgumentException;
 use Symfony\Component\DependencyInjection\Reference;
-use SzewczykMaciek\Bundle\TestGeneratorBundle\Util\TestGeneratorInterface;
+use SzewczykMaciek\Bundle\TestGenerator\Command\TestGeneratorCommand;
+use SzewczykMaciek\Bundle\TestGenerator\Util\TestGeneratorInterface;
 
 class TestGeneratorCommandRegistrationPass implements CompilerPassInterface
 {
@@ -26,7 +27,7 @@ class TestGeneratorCommandRegistrationPass implements CompilerPassInterface
             }
 
             $container->register(
-                sprintf('test.generator.auto_command.%s', $class::getCommandName()),
+                sprintf('test.generator.%s',$class::getCommandName()),
                 TestGeneratorCommand::class
             )->setArguments([
                 new Reference($id)

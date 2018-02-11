@@ -1,27 +1,12 @@
 <?php
 
-namespace Symfony\Bundle\MakerBundle\Command;
+namespace SzewczykMaciek\Bundle\TestGenerator\Command;
 
-use Symfony\Bundle\MakerBundle\ApplicationAwareMakerInterface;
-use Symfony\Bundle\MakerBundle\ConsoleStyle;
-use Symfony\Bundle\MakerBundle\DependencyBuilder;
-use Symfony\Bundle\MakerBundle\Exception\RuntimeCommandException;
-use Symfony\Bundle\MakerBundle\ExtraGenerationMakerInterface;
-use Symfony\Bundle\MakerBundle\Generator;
-use Symfony\Bundle\MakerBundle\InputConfiguration;
-use Symfony\Bundle\MakerBundle\MakerInterface;
-use Symfony\Bundle\MakerBundle\Validator;
-use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
-use SzewczykMaciek\Bundle\TestGeneratorBundle\Util\TestGeneratorInterface;
+use SzewczykMaciek\Bundle\TestGenerator\Util\TestGeneratorInterface;
 
-/**
- * Used as the Command class for the generators.
- *
- * @internal
- */
 final class TestGeneratorCommand extends Command
 {
     private $generator;

@@ -1,12 +1,12 @@
 <?php
-namespace SzewczykMaciek\Bundle\TestGeneratorBundle\DependencyInjection;
+namespace SzewczykMaciek\Bundle\TestGenerator\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use SzewczykMaciek\Bundle\TestGeneratorBundle\DependencyInjection\CompilerPass\TestGeneratorCommandRegistrationPass;
-use SzewczykMaciek\Bundle\TestGeneratorBundle\Util\TestGeneratorInterface;
+use SzewczykMaciek\Bundle\TestGenerator\DependencyInjection\CompilerPass\TestGeneratorCommandRegistrationPass;
+use SzewczykMaciek\Bundle\TestGenerator\Util\TestGeneratorInterface;
 
 
 class TestGeneratorExtension extends Extension

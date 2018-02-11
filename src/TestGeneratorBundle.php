@@ -1,11 +1,10 @@
 <?php
-namespace SzewczykMaciek\Bundle\TestGeneratorBundle;
+namespace SzewczykMaciek\Bundle\TestGenerator;
 
-use Symfony\Bundle\MakerBundle\DependencyInjection\CompilerPass\MakeCommandRegistrationPass;
 use Symfony\Component\DependencyInjection\Compiler\PassConfig;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use SzewczykMaciek\Bundle\TestGeneratorBundle\DependencyInjection\CompilerPass\TestGeneratorCommandRegistrationPass;
+use SzewczykMaciek\Bundle\TestGenerator\DependencyInjection\CompilerPass\TestGeneratorCommandRegistrationPass;
 
 /**
  * @author Maciej Szewczyk <kontakt@szewczykmaciej.pl>
