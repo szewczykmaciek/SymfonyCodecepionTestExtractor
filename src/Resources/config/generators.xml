@@ -12,9 +12,5 @@
                 <tag name="test.generator.command" />
             </service>
 
-            <service id="test.generator.generate_controller" class="SzewczykMaciek\Bundle\TestGenerator\Generators\GenerateController">
-                <argument>%kernel.project_dir%</argument>
-                <tag name="test.generator.command" />
-            </service>
         </services>
 </container>

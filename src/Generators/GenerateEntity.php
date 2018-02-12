@@ -2,12 +2,14 @@
 namespace SzewczykMaciek\Bundle\TestGenerator\Generators;
 
 use Symfony\Component\Console\Command\Command;
-use Symfony\Component\Console\Input\InputArgument;
+use Symfony\Component\Console\Input\InputInterface;
+use Symfony\Component\Console\Style\SymfonyStyle;
 use SzewczykMaciek\Bundle\TestGenerator\Util\TestGeneratorAbstract;
 
 
 final class GenerateEntity extends TestGeneratorAbstract
 {
+
     public static function getCommandName(): string
     {
         return 'test:generate:entity';
@@ -17,8 +19,28 @@ final class GenerateEntity extends TestGeneratorAbstract
     {
         $command
             ->setDescription('Creates an test for entity class')
-            ->addArgument('file', InputArgument::REQUIRED, 'path to file that will be processed (e.g. <fg=yellow>src/Entity/User.php</>)')
             ->setHelp(file_get_contents(__DIR__.'/../Resources/help/GenerateEntity.txt'))
         ;
+        return $command;
+    }
+
+    public function filterFiles(\ArrayObject $files): \ArrayObject
+    {
+       foreach ($files as $index=>$file){
+           if($file=='src/BrokerStar/WriterBundle/Entity/WriterTemplate.php'){
+               $files->offsetUnset(22);
+               $files->offsetUnset(22);
+           }
+       }
+
+       return $this->filesToProcess=$files;
+    }
+
+    public function generate(SymfonyStyle $io){
+
+        foreach ($this->filesToProcess as $file){
+            sleep(0.1);
+            $io->progressAdvance();
+        }
     }
 }
