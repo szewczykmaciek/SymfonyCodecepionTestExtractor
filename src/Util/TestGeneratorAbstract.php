@@ -15,4 +15,5 @@ abstract class TestGeneratorAbstract implements TestGeneratorInterface
         return $this->filesToProcess->count();
     }
 
+
 }

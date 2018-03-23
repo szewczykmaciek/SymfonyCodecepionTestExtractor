@@ -12,7 +12,7 @@ final class GenerateEntity extends TestGeneratorAbstract
 
     public static function getCommandName(): string
     {
-        return 'test:generate:entity';
+        return 'bs:generate:test:entity';
     }
 
     public function configureCommand(Command $command)
@@ -28,9 +28,8 @@ final class GenerateEntity extends TestGeneratorAbstract
     {
        foreach ($files as $index=>$file){
            if($file=='src/BrokerStar/WriterBundle/Entity/WriterTemplate.php'){
-               $files->offsetUnset(22);
-               $files->offsetUnset(22);
-           }
+               $files->offsetUnset($index);
+            }
        }
 
        return $this->filesToProcess=$files;
